@@ -37,19 +37,9 @@ namespace Calculator
 			Dictionary<string, int> operations = new Dictionary<string, int>() { { "+", 0 }, { "-", 1 }, { "*", 2 }, { "/", 3 }, { "!", 4} };
 			if (operation == "!")
 			{
-				if ((double.Parse(calc_curInput)) > 9)
-				{
-					labelOutput.Content = "ERR: TOO LONG";
-					buttonAvailability(false, "0123456789pmtdfe."); //disable all buttons except clear
-				}
-				else
-				{
-					switchOperations(operations[operation]);
-					buttonAvailability(false, "0123456789pmtdf");
-				}
-			} else {
-				switchOperations(operations[operation]);
+				buttonAvailability(false, "0123456789pmtdf");
 			}
+			switchOperations(operations[operation]);
 		}
 
 		private void buttonEquals_Click(object sender, EventArgs e)
@@ -118,7 +108,14 @@ namespace Calculator
 					{
 						result *= i;
 					}
-					filterInput(result);
+					if (double.IsInfinity(result))
+					{
+						labelOutput.Content = "Infinity";
+					}
+					else
+					{
+						filterInput(result);
+					}
 					break;
 				}
 				default:
