@@ -1,0 +1,14 @@
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\bin\Debug\Calculator Better UI.exe.config
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\bin\Debug\Calculator Better UI.exe
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\bin\Debug\Calculator Better UI.pdb
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\Calculator Better UI.csprojResolveAssemblyReference.cache
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\MainWindow.g.cs
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\App.g.cs
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\Calculator Better UI_MarkupCompile.cache
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\Calculator Better UI_MarkupCompile.lref
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\MainWindow.baml
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\Calculator Better UI.g.resources
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\Calculator_Better_UI.Properties.Resources.resources
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\Calculator Better UI.csproj.GenerateResource.Cache
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\Calculator Better UI.exe
+c:\users\djwolf\documents\visual studio 2015\Projects\Calculator Better UI\Calculator Better UI\obj\Debug\Calculator Better UI.pdb
