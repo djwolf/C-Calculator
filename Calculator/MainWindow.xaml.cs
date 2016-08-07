@@ -7,19 +7,18 @@ namespace Calculator
 {
 	public partial class MainWindow : Window
 	{
-		private string calc_curInput;
-		private int calc_operation;
+		private string calc_curInput = "0";
+		private int calc_operation = -1; //0 - add / 1 - subtract / 2 - multiply / 3 - divide
 		private double calc_firstInpt;
 		private double calc_secondInpt;
 		private bool calc_working = false;
+		private bool calc_Negative = false;
 		private ArrayList calc_inputs = new ArrayList();
 		private ArrayList calc_operations = new ArrayList();
 
 		public MainWindow()
 		{
 			InitializeComponent();
-			calc_curInput = "";
-			calc_operation = -1; //0 - add / 1 - subtract / 2 - multiply / 3 - divide
 			buttonAvailability(false, "e");
 		}
 
@@ -50,7 +49,8 @@ namespace Calculator
 				{'f',buttonFactorial},
 				{'e',buttonEquals},
 				{'c',buttonClear},
-				{'.',buttonDec}
+				{'.',buttonDec},
+				{'n',buttonPosNeg}
 			};
 			foreach (char i in ctrlArr)
 			{
@@ -222,7 +222,7 @@ namespace Calculator
 				calc_firstInpt = 0;
 			}
 
-			calc_curInput = "";
+			calc_curInput = "0";
 			buttonAvailability(true, "e");
 
 			calc_operation = oper;

@@ -59,7 +59,7 @@ namespace Calculator
 			}
 
 			//disable all buttons except the clear button
-			buttonAvailability(false, "0123456789e.");
+			buttonAvailability(false, "0123456789e.n");
 
 			//switch through the operations and perform the necessary actions for the user
 			var result = 1.0;
@@ -138,7 +138,7 @@ namespace Calculator
 			calc_firstInpt = 0;
 			calc_secondInpt = 0;
 
-			buttonAvailability(true, "0123456789pmtdf."); //re-enable all number buttons
+			buttonAvailability(true, "0123456789pmtdf.n"); //re-enable all number buttons
 			buttonAvailability(false, "e"); //disable equals button
 		}
 
@@ -157,6 +157,24 @@ namespace Calculator
 			labelOutput.Content = calc_curInput;
 			buttonAvailability(false, ".");
 			filterInput(calc_curInput);
+		}
+
+		private void buttonPosNeg_Click(object sender, EventArgs e)
+		{
+			Console.WriteLine("Event Executed");
+			if (calc_curInput.Equals("0")) { return; }
+			if (!calc_Negative)
+			{ //change to negative
+				calc_curInput = calc_curInput.Insert(0, "-");
+				Console.WriteLine($"Filtering input with {calc_curInput}");
+				filterInput(calc_curInput);
+				calc_Negative = true;
+			} else { //change to positive
+				calc_curInput = calc_curInput.Substring(1,(calc_curInput.Length - 1));
+				Console.WriteLine($"Filtering input with {calc_curInput}");
+				filterInput(calc_curInput);
+				calc_Negative = false;
+			}
 		}
 	}
 }

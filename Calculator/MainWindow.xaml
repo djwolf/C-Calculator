@@ -12,7 +12,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Canvas HorizontalAlignment="Left" Height="361" Margin="10,68,0,0" VerticalAlignment="Top" Width="322">
-            <Button x:Name="button0" Content="0" Canvas.Top="210" Width="160" Height="70" FontSize="32.25" Click="Click_Number"/>
+            <Button x:Name="button0" Content="0" Canvas.Top="210" Width="80" Height="70" FontSize="32.25" Click="Click_Number"/>
             <Button x:Name="button1" Content="1" Canvas.Top="140" Width="80" Height="70" FontSize="32.25" Click="Click_Number"/>
             <Button x:Name="button2" Content="2" Canvas.Left="80" Canvas.Top="140" Width="80" Height="70" FontSize="32.25" Click="Click_Number"/>
             <Button x:Name="button3" Content="3" Canvas.Left="160" Canvas.Top="140" Width="80" Height="70" FontSize="32.25" Click="Click_Number"/>
@@ -30,6 +30,7 @@
             <Button x:Name="buttonEquals" Content="=" Canvas.Left="120" Canvas.Top="280" Width="120" Height="70" FontSize="32.25" Click="buttonEquals_Click"/>
             <Button x:Name="buttonClear" Content="Clear" FontSize="32.25" Canvas.Top="280" Height="70" Width="120" Click="buttonClear_Click"/>
             <Button x:Name="buttonDec" Content="." Canvas.Left="160" Canvas.Top="210" Width="80" Height="70" FontSize="32.25" Click="buttonDec_Click"/>
+            <Button x:Name="buttonPosNeg" Content="+/-" Canvas.Left="80" Canvas.Top="210" Width="80" Height="70" FontSize="32.25" Click="buttonPosNeg_Click"/>
         </Canvas>
         <ScrollViewer x:Name="labelOutput" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" VerticalAlignment="Top" Width="325" Content="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" FontSize="32.25"/>
 
