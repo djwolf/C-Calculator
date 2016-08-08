@@ -23,6 +23,10 @@ namespace Calculator
 			} else {
 				calc_curInput += value;
 			}
+			if (value != "0")
+			{
+				buttonAvailability(true, "n");
+			}
 			filterInput(calc_curInput);
 		}
 

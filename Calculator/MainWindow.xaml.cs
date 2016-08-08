@@ -64,10 +64,16 @@ namespace Calculator
 			calc_working = true;
 			string _commaSTR = _inpt;
 			int decIndex = _inpt.IndexOf(".");
+			int negIndex = _inpt.IndexOf("-");
 
 			if (decIndex != -1)
 			{
 				_commaSTR = _inpt.Substring(0, decIndex);
+			}
+
+			if (negIndex != -1)
+			{
+				_commaSTR = _inpt.Substring(1,(_commaSTR.Length - 1));
 			}
 
 			if (_commaSTR.Length > 3)
@@ -122,27 +128,41 @@ namespace Calculator
 				{
 					labelOutput.Content = _newSTR;
 				}
+				if (negIndex != -1)
+				{
+					labelOutput.Content = "-" + labelOutput.Content;
+				}
 			} else {
 				if (decIndex != -1)
 				{
 					labelOutput.Content = _commaSTR + _inpt.Substring(decIndex, (_inpt.Length) - decIndex);
 				} else {
 					labelOutput.Content = _commaSTR;
+				}
+				if (negIndex != -1)
+				{
+					labelOutput.Content = "-" + labelOutput.Content;
 				}
 			}
 			calc_working = false;
 		}
 
 		private void filterInput(double _input)
-		{ //1st overload
+		{ //overload
 			calc_working = true;
 			string _inpt = "" + _input;
 			string _commaSTR = _inpt;
 			int decIndex = _inpt.IndexOf(".");
+			int negIndex = _inpt.IndexOf("-");
 
 			if (decIndex != -1)
 			{
 				_commaSTR = _inpt.Substring(0, decIndex);
+			}
+
+			if (negIndex != -1)
+			{
+				_commaSTR = _inpt.Substring(1, (_commaSTR.Length - 1));
 			}
 
 			if (_commaSTR.Length > 3)
@@ -197,12 +217,20 @@ namespace Calculator
 				{
 					labelOutput.Content = _newSTR;
 				}
+				if (negIndex != -1)
+				{
+					labelOutput.Content = "-" + labelOutput.Content;
+				}
 			} else {
 				if (decIndex != -1)
 				{
 					labelOutput.Content = _commaSTR + _inpt.Substring(decIndex, (_inpt.Length) - decIndex);
 				} else {
 					labelOutput.Content = _commaSTR;
+				}
+				if (negIndex != -1)
+				{
+					labelOutput.Content = "-" + labelOutput.Content;
 				}
 			}
 			calc_working = false;
@@ -210,7 +238,7 @@ namespace Calculator
 
 		private void switchOperations(int oper)
 		{
-			buttonAvailability(false, "pmdtf");
+			buttonAvailability(false, "pmdtfn");
 
 			//take the current input value and parse it into a long
 			try
@@ -223,6 +251,7 @@ namespace Calculator
 			}
 
 			calc_curInput = "0";
+			calc_Negative = false;
 			buttonAvailability(true, "e");
 
 			calc_operation = oper;
